@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Bar</title>
+  <meta name="description" content="A modern, responsive navigation bar with a slide-in mobile menu built with HTML, CSS, and JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="logo">
+        <span class="logo__mark" aria-hidden="true">◆</span>
+        Nova<span>Site</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav__cta">Get Started</a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__head">
+      <a href="#home" class="logo">
+        <span class="logo__mark" aria-hidden="true">◆</span>
+        Nova<span>Site</span>
+      </a>
+      <button class="close-btn" id="closeBtn" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-menu__links">
+      <li><a href="#home" class="active"><span class="ico" aria-hidden="true">🏠</span> Home</a></li>
+      <li><a href="#features"><span class="ico" aria-hidden="true">✨</span> Features</a></li>
+      <li><a href="#services"><span class="ico" aria-hidden="true">🛠️</span> Services</a></li>
+      <li><a href="#pricing"><span class="ico" aria-hidden="true">💳</span> Pricing</a></li>
+      <li><a href="#contact"><span class="ico" aria-hidden="true">✉️</span> Contact</a></li>
+    </ul>
+
+    <div class="mobile-menu__cta">
+      <a href="#contact">Get Started</a>
+    </div>
+  </aside>
+
+  <!-- ================= DEMO CONTENT ================= -->
+  <main>
+    <section class="hero" id="home">
+      <h1>Responsive Navigation Bar</h1>
+      <p>A modern, accessible navbar that adapts smoothly from desktop to mobile with an animated slide-in toggle menu.</p>
+      <div class="hero__actions">
+        <a href="#features" class="btn btn--primary">Explore Features</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Features</h2>
+      <p>Everything you need in a navigation bar — clean, fast, and built to feel native on every screen size.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">📱</div>
+          <h3>Fully Responsive</h3>
+          <p>Collapses into a smooth slide-in drawer on smaller screens automatically.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">⚡</div>
+          <h3>Lightweight</h3>
+          <p>Pure HTML, CSS, and vanilla JavaScript — no frameworks or dependencies.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">♿</div>
+          <h3>Accessible</h3>
+          <p>Keyboard-friendly with proper ARIA attributes and focus handling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <p>This demo section shows how the navbar behaves while scrolling and navigating between anchors.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">🎨</div>
+          <h3>UI Design</h3>
+          <p>Modern, clean interfaces crafted for clarity and usability.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">💻</div>
+          <h3>Web Development</h3>
+          <p>Fast, responsive websites built with best practices.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🚀</div>
+          <h3>Performance</h3>
+          <p>Optimized for speed and smooth interactions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <h2>Pricing</h2>
+      <p>Simple, transparent plans. This is placeholder content for the navigation demo.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">🌱</div>
+          <h3>Starter</h3>
+          <p>Perfect for personal projects and experiments.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🔥</div>
+          <h3>Pro</h3>
+          <p>For growing teams that need more power.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🏢</div>
+          <h3>Enterprise</h3>
+          <p>Advanced controls and dedicated support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Reach out anytime — this is demo content for the responsive navigation bar.</p>
+      <div class="hero__actions" style="justify-content:flex-start; margin-top: 24px;">
+        <a href="#home" class="btn btn--primary">Back to Top</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> NovaSite · Responsive Navigation Bar Demo
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
